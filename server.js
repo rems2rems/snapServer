@@ -16,9 +16,11 @@ app.all('*', (request, response) => {
 })
 
 app.listen(3000, () => {
+    usersService.createUser({ name: "ana", id: "B33c5g" })
     usersService.createUser({ name: "john doe", id: "8h8cv9" })
     snapsService.createAlbum("8h8cv9", "nHya2t")
-    snapsService.createSnap("8h8cv9", "nHya2t", { id: "yj9jKq", desc: "nice pic!", location: { lon: -0.56419, lat: 45.0672991 } })
-    snapsService.createSnap("8h8cv9", "nHya2t", { id: "e2lki8", desc: "another pic!", location: { lon: -0.56419, lat: 45.0672991 } })
+    snapsService.createAlbum("B33c5g", "MyT371")
+    snapsService.createSnap("B33c5g", "MyT371", { id: "k8fF65", desc: "nice pic!", location: { lon: -0.56419, lat: 45.0672991 } })
+//    snapsService.createSnap("8h8cv9", "nHya2t", { id: "e2lki8", desc: "another pic!", location: { lon: -0.56419, lat: 45.0672991 } })
     console.log("listening on http://localhost:3000 ...");
 })
